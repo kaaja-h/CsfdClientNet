@@ -1,0 +1,20 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
+  &lt;Assembly Path="C:\Users\admin\.nuget\packages\system.linq.async\5.0.0\ref\netcoreapp3.1\System.Linq.Async.dll" /&gt;&#xD;
+&lt;/AssemblyExplorer&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8bb08470_002D2b73_002D4092_002D90fd_002D61751ecde088/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::6D25BE98-ABE2-492F-BCB8-0B7F88003CF8::net6.0::CsfdClientNet.Test.MovieFinderTest.Test1&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::6D25BE98-ABE2-492F-BCB8-0B7F88003CF8::net6.0::CsfdClientNet.Test.FullTest.FindMovie&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::6D25BE98-ABE2-492F-BCB8-0B7F88003CF8::net6.0::CsfdClientNet.Test.MovieFinderTest.Test3&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::6D25BE98-ABE2-492F-BCB8-0B7F88003CF8::net5.0::CsfdClientNet.Test.MockTests.Test1&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::6D25BE98-ABE2-492F-BCB8-0B7F88003CF8::net6.0::CsfdClientNet.Test.NewTest.Pokus&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::6D25BE98-ABE2-492F-BCB8-0B7F88003CF8::net5.0::CsfdClientNet.Test.NewTest.Pokus&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f2c175c5_002D7c73_002D43ba_002D8ba2_002Dc3df4f20bb5d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="FindMovie" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Not&gt;&#xD;
+    &lt;Project Location="C:\Users\admin\Documents\Projects\CsfdClientNet\src\CsfdClientNet.Test" Presentation="&amp;lt;CsfdClientNet.Test&amp;gt;" /&gt;&#xD;
+  &lt;/Not&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Csfd/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>
