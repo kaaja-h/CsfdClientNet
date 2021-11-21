@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CsfdClientNet</name>
+    </assembly>
+    <members>
+        <member name="T:CsfdClientNet.Cache.ICsfdClientCache">
+            <summary>
+            Csfd data Cache interface
+            </summary>
+        </member>
+        <member name="M:CsfdClientNet.Cache.ICsfdClientCache.FindMovieByName(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Finds movie by name
+            </summary>
+            <param name="name">movie name</param>
+            <param name="token">async cancellation token</param>
+            <returns>list of movies</returns>
+        </member>
+        <member name="M:CsfdClientNet.Cache.ICsfdClientCache.GetMovieDetail(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Get movie by detail
+            </summary>
+            <param name="id">movie id</param>
+            <param name="token">async cancellation token</param>
+            <returns>movie detail</returns>
+        </member>
+        <member name="M:CsfdClientNet.Cache.ICsfdClientCache.FindCreatorByName(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Find creator by name
+            </summary>
+            <param name="name">creator name</param>
+            <param name="token">async cancellation token</param>
+            <returns>list of creators</returns>
+        </member>
+        <member name="M:CsfdClientNet.Cache.ICsfdClientCache.GetCreatorDetail(System.String,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="id">creator id</param>
+            <param name="token">async cancellation token</param>
+            <returns>creator detail</returns>
+        </member>
+        <member name="M:CsfdClientNet.Cache.ICsfdClientCache.SaveMovie(CsfdClientNet.Data.Movie,System.Threading.CancellationToken)">
+            <summary>
+            Save movie to cache
+            </summary>
+            <param name="movie">movie to save</param>
+            <param name="token">async cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:CsfdClientNet.Cache.ICsfdClientCache.SaveMovieDetail(CsfdClientNet.Data.MovieDetail,System.Threading.CancellationToken)">
+            <summary>
+            Save movie detail to cache
+            </summary>
+            <param name="movieDetail">movie detail to save</param>
+            <param name="token">async cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:CsfdClientNet.Cache.ICsfdClientCache.SaveCreator(CsfdClientNet.Data.Creator,System.Threading.CancellationToken)">
+            <summary>
+            Save Creator to cache
+            </summary>
+            <param name="creator">creator to save</param>
+            <param name="token">async cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:CsfdClientNet.Cache.ICsfdClientCache.SaveCreatorDetail(CsfdClientNet.Data.CreatorDetail,System.Threading.CancellationToken)">
+            <summary>
+            Save CreatorDetail to cache
+            </summary>
+            <param name="detail">CreatorDetail to save</param>
+            <param name="token">async cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="T:CsfdClientNet.Cache.MemoryCache">
+            <summary>
+            In memory cache
+            </summary>
+        </member>
+        <member name="M:CsfdClientNet.Cache.MemoryCache.#ctor(System.TimeSpan)">
+            <summary>
+            constructor
+            </summary>
+            <param name="liveTime">memory item livetime</param>
+        </member>
+        <member name="M:CsfdClientNet.Cache.MemoryCache.FindMovieByName(System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:CsfdClientNet.Cache.MemoryCache.GetMovieDetail(System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:CsfdClientNet.Cache.MemoryCache.FindCreatorByName(System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:CsfdClientNet.Cache.MemoryCache.GetCreatorDetail(System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:CsfdClientNet.Cache.MemoryCache.SaveMovie(CsfdClientNet.Data.Movie,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:CsfdClientNet.Cache.MemoryCache.SaveMovieDetail(CsfdClientNet.Data.MovieDetail,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:CsfdClientNet.Cache.MemoryCache.SaveCreator(CsfdClientNet.Data.Creator,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:CsfdClientNet.Cache.MemoryCache.SaveCreatorDetail(CsfdClientNet.Data.CreatorDetail,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:CsfdClientNet.CsfdClient">
+            <summary>
+            Csfd client
+            </summary>
+        </member>
+        <member name="M:CsfdClientNet.CsfdClient.#ctor">
+            <summary>
+            constructor with default options
+            </summary>
+        </member>
+        <member name="M:CsfdClientNet.CsfdClient.#ctor(CsfdClientNet.CsfdClientOptions)">
+            <summary>
+            constructor with option settings
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:CsfdClientNet.CsfdClient.FindMovies(System.String,System.Boolean)">
+            <summary>
+            Find movies by name
+            </summary>
+            <param name="name">movie name</param>
+            <param name="useCache">use cache</param>
+            <returns>movie list</returns>
+        </member>
+        <member name="M:CsfdClientNet.CsfdClient.FindMovies(System.String,System.Threading.CancellationToken,System.Boolean)">
+            <summary>
+            Find movies by name
+            </summary>
+            <param name="name">movie name</param>
+            <param name="token">async cancelation token</param>
+            <param name="useCache">use cache</param>
+            <returns>movie list</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:CsfdClientNet.CsfdClient.FindCreator(System.String,System.Boolean)">
+            <summary>
+            find creator by name
+            </summary>
+            <param name="name">creator name</param>
+            <param name="useCache">use cache</param>
+            <returns>Creators list</returns>
+        </member>
+        <member name="M:CsfdClientNet.CsfdClient.FindCreator(System.String,System.Threading.CancellationToken,System.Boolean)">
+            <summary>
+            find creator by name
+            </summary>
+            <param name="name">creator name</param>
+            <param name="token">async cancellation token</param>
+            <param name="useCache">use cache</param>
+            <returns>Creators list</returns>
+        </member>
+        <member name="M:CsfdClientNet.CsfdClient.GetMovieDetail(CsfdClientNet.Data.Movie,System.Boolean)">
+            <summary>
+            Get movie detail
+            </summary>
+            <param name="movie">movie for detail</param>
+            <param name="useCache">use cache</param>
+            <returns>Movie detail</returns>
+        </member>
+        <member name="M:CsfdClientNet.CsfdClient.GetMovieDetail(CsfdClientNet.Data.Movie,System.Threading.CancellationToken,System.Boolean)">
+            <summary>
+            Get movie detail
+            </summary>
+            <param name="movie">movie for detail</param>
+            <param name="token">async cancellation token</param>
+            <param name="useCache">use cache</param>
+            <returns>Movie detail</returns>
+        </member>
+        <member name="M:CsfdClientNet.CsfdClient.GetCreatorDetail(CsfdClientNet.Data.Creator,System.Boolean)">
+            <summary>
+            Get creator detail
+            </summary>
+            <param name="creator">creator</param>
+            <param name="useCache">use cache</param>
+            <returns>Creator detail</returns>
+        </member>
+        <member name="M:CsfdClientNet.CsfdClient.GetCreatorDetail(CsfdClientNet.Data.Creator,System.Threading.CancellationToken,System.Boolean)">
+            <summary>
+            Get creator detail
+            </summary>
+            <param name="creator">creator</param>
+            <param name="token">async cancellation token</param>
+            <param name="useCache">use cache</param>
+            <returns>Creator detail</returns>
+        </member>
+        <member name="T:CsfdClientNet.CsfdClientOptions">
+            <summary>
+            Csfd client options
+            </summary>
+        </member>
+        <member name="P:CsfdClientNet.CsfdClientOptions.LoggerFactory">
+            <summary>
+            Logger factory
+            </summary>
+        </member>
+        <member name="P:CsfdClientNet.CsfdClientOptions.Cache">
+            <summary>
+            Cleint cache, Default MemoryCache <see cref="T:CsfdClientNet.Cache.MemoryCache"/>
+            </summary>
+        </member>
+        <member name="P:CsfdClientNet.CsfdClientOptions.RequestDelay">
+            <summary>
+            Delay between requests
+            </summary>
+        </member>
+        <member name="T:CsfdClientNet.Data.Creator">
+            <summary>
+            Movie creator
+            </summary>
+        </member>
+        <member name="P:CsfdClientNet.Data.Creator.Id">
+            <summary>
+            Creator ID (csfd URL part)
+            </summary>
+        </member>
+        <member name="P:CsfdClientNet.Data.Creator.Name">
+            <summary>
+            Creator name
+            </summary>
+        </member>
+        <member name="T:CsfdClientNet.Data.CreatorDetail">
+            <summary>
+            Creator detail
+            </summary>
+        </member>
+        <member name="P:CsfdClientNet.Data.CreatorDetail.Biography">
+            <summary>
+            Creator biography
+            </summary>
+        </member>
+        <member name="P:CsfdClientNet.Data.CreatorDetail.Creator">
+            <summary>
+            Creator
+            </summary>
+        </member>
+        <member name="T:CsfdClientNet.Data.Movie">
+            <summary>
+            Csfd movie
+            </summary>
+        </member>
+        <member name="P:CsfdClientNet.Data.Movie.Id">
+            <summary>
+            Movie ID (csfd URL part)
+            </summary>
+        </member>
+        <member name="P:CsfdClientNet.Data.Movie.Name">
+            <summary>
+            Movie name
+            </summary>
+        </member>
+        <member name="P:CsfdClientNet.Data.Movie.Year">
+            <summary>
+            Movie year
+            </summary>
+        </member>
+        <member name="T:CsfdClientNet.Data.MovieDetail">
+            <summary>
+            Movie detail
+            </summary>
+        </member>
+        <member name="P:CsfdClientNet.Data.MovieDetail.Professions">
+            <summary>
+            Creator of movie sorted by profession
+            </summary>
+        </member>
+        <member name="P:CsfdClientNet.Data.MovieDetail.Plots">
+            <summary>
+            Movie plots 
+            </summary>
+        </member>
+        <member name="P:CsfdClientNet.Data.MovieDetail.RatingAverage">
+            <summary>
+            Average rating (percent)
+            </summary>
+        </member>
+        <member name="P:CsfdClientNet.Data.MovieDetail.RatingCount">
+            <summary>
+            Rating count
+            </summary>
+        </member>
+        <member name="P:CsfdClientNet.Data.MovieDetail.Genres">
+            <summary>
+            List of genres
+            </summary>
+        </member>
+        <member name="P:CsfdClientNet.Data.MovieDetail.DateCreated">
+            <summary>
+            Date created 
+            </summary>
+        </member>
+        <member name="P:CsfdClientNet.Data.MovieDetail.Origin">
+            <summary>
+            Movie origin
+            </summary>
+        </member>
+        <member name="P:CsfdClientNet.Data.MovieDetail.Length">
+            <summary>
+            Movie length
+            </summary>
+        </member>
+        <member name="P:CsfdClientNet.Data.MovieDetail.Movie">
+            <summary>
+            Movie
+            </summary>
+        </member>
+    </members>
+</doc>

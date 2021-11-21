@@ -10,7 +10,12 @@ namespace CsfdClientNet.Data
     /// </summary>
     public class Movie
     {
-        internal Movie(string id, string name)
+        /// <summary>
+        /// Movie contructor
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="name"></param>
+        public Movie(string id, string name)
         {
             Id = id;
             Name = name;

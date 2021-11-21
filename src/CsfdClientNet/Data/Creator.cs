@@ -6,7 +6,12 @@
     /// </summary>
     public class Creator
     {
-        internal Creator(string id, string name)
+        /// <summary>
+        /// Creator contructor
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="name"></param>
+        public Creator(string id, string name)
         {
             Id = id;
             Name = name;
